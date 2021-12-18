@@ -1,11 +1,15 @@
 
+/* Hero Section Style */
 .hero{
     background-position: bottom;
     height: auto;
     margin-bottom: 40px;
     text-align: center;
 }
+/* End Hero Section Style */
 
+
+/* Page Title Style */
 .page-title{
     border-bottom: 4px solid #fce138;
     color: #fce138;
@@ -15,11 +19,14 @@
     font-weight: normal;
     padding: 0 80px 15px 80px;
 }
+/* End Page Title Style */
 
+
+/* Secondary Content Style */
 .secondary-content{
-    width: 80%;
-    margin: 0 auto;
     color: #024e76;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .secondary-content h3{
@@ -41,3 +48,4 @@
     color: #39a6b2;
     margin: 10px 0 10px 0;
 }
+/* Secondary Content Style */

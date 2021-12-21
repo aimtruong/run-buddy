@@ -12,3 +12,5 @@ https://aimtruong.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Aimee Truong
+
+### ©️2019 Run Buddy, Inc

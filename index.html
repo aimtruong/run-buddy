@@ -5,7 +5,7 @@
         <meta charset = "UTF-8" />
         <title> Run Buddy </title>
     </head>
-
+<body>
 
 <!-- Header -->
     <header>
@@ -13,7 +13,7 @@
             <a href = "/">RUN BUDDY</a>
         </h1>
             <nav>
-                <u1>
+                <ul>
                     <li>
                         <a href = "#what-we-do">What We Do</a>
                     </li>
@@ -26,7 +26,7 @@
                     <li>
                         <a href = "#reach-out">Reach Out</a>
                     </li>
-                </u1>
+                </ul>
             </nav>
     </header>
 <!-- End Header -->
@@ -34,6 +34,11 @@
 
 <!-- hero section -->
     <section class = "hero">
+        <div class = "hero-cta">
+            <h2>Start Building Habits.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quis laborum blanditiis laudantium? Dolor consequatur molestiae aliquid quasi officia alias, velit ea necessitatibus quo corporis quas. Eveniet magni saepe corrupti?</p>
+        </div>
+
         <div class = "hero-form">
             <h3>Get Started Today</h3>
                 <p>Fill out this form and one of our trainers will schedule a consult</p>
@@ -44,7 +49,7 @@
                         <input type = "email" placeholder = "Email Address" name = "email" id = "email" class = "form-input"/>
                     <label for = "phone">Enter a telephone number:</label>
                         <input type = "tel" placeholder = "Phone Number" name = "phone" id = "phone" class = "form-input"/>
-                  <p>
+                    <p>
                       Have you worked out with a trainer before?
                       <input type = "radio" name = "trainer-confirm" id = "trainer-yes" />
                         <label for = "trainer-yes">Yes</label>
@@ -78,17 +83,17 @@
     <section id = "what-we-do" class = "intro">
         <div class = "flex-row">
         <h2 class = "section-title primary-border">What We Do</h2>
+        </div>
             <div class = "flex-row">
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, et! Maxime laboriosam aperiam deleniti eos recusandae labore aliquam libero quibusdam reprehenderit nostrum ex dicta accusamus ipsa, inventore, velit quo accusantium?
             </p>
             </div>
-        </div>
     </section>
 
-    
+
     <section id = "what-you-do" class = "steps">
-        <div>
+        <div class = "flex-row">
         <h2 class = "section-title secondary-border">What You Do</h2>
         </div>
             <div class = "step">
@@ -142,41 +147,43 @@
     </section>
     
 
-    <section id = "your-trainers" class = "trainers">
-        <div>
+    <section id = "your-trainers">
+        <div class = "flex-row">
         <h2 class = "section-title primary-border"> Meet The Trainers</h2>
         </div>
-        <article class = "trainer">
-            <img src = "./assets/images/trainer-1.jpg" alt = "Arron Stephens in his workout clothes, ready to pump iron" />
-            <div class = "trainer-bio text-left">
-                <h3>Arron Stephens</h3>
-                <h4>Speed / Strength</h4>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut rem iure, dolore perspiciatis at quo necessitatibus possimus facere ducimus sint a nisi! Officiis accusantium temporibus odit dicta laudantium cupiditate?</p>
-            </div>
-        </article>
+        <div class = "trainers">
+            <article class = "trainer">
+                <img src = "./assets/images/trainer-1.jpg" alt = "Arron Stephens in his workout clothes, ready to pump iron" />
+                <div class = "trainer-bio">
+                    <h3 class = "trainer-name">Arron Stephens</h3>
+                    <h4 class = "trainer-role">Speed / Strength</h4>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ut rem iure, dolore perspiciatis at quo necessitatibus possimus facere ducimus sint a nisi! Officiis accusantium temporibus odit dicta laudantium cupiditate?</p>
+                </div>
+            </article>
 
-        <article class = "trainer">
-            <div class = "trainer-bio text-right">
-                <h3>Joanna Gill</h3>
-                <h4>Endurance</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni minus nulla molestias porro a explicabo et ducimus deserunt, vel ipsum accusantium rerum eveniet at labore ea error, enim facere.</p>
-            </div>
-            <img src = "./assets/images/trainer-2.jpg" alt = "Joanna Gill cooling off after a workout" />
-        </article>
+            <article class = "trainer">
+                <img src = "./assets/images/trainer-2.jpg" alt = "Joanna Gill cooling off after a workout" />
+                <div class = "trainer-bio">
+                    <h3 class = "trainer-name">Joanna Gill</h3>
+                    <h4 class = "trainer-role">Endurance</h4>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni minus nulla molestias porro a explicabo et ducimus deserunt, vel ipsum accusantium rerum eveniet at labore ea error, enim facere.</p>
+                </div>
+            </article>
 
-        <article class = "trainer">
-            <img src = "./assets/images/trainer-3.jpg" alt = "Harry Smith wearing a headband and lifting comically small pink weights" />
-            <div class = "trainer-bio text-left">
-                <h3>Harry "the Headband" Smith</h3>
-                <h4>Strength</h4>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, hic nulla sapiente nesciunt iste quod, placeat officia vero tenetur similique impedit et sed quis corrupti a natus labore quae esse!</p>
-            </div>
-        </article>
+            <article class = "trainer">
+                <img src = "./assets/images/trainer-3.jpg" alt = "Harry Smith wearing a headband and lifting comically small pink weights" />
+                <div class = "trainer-bio">
+                    <h3 class = "trainer-name">Harry "the Headband" Smith</h3>
+                    <h4 class = "trainer-role">Strength</h4>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, hic nulla sapiente nesciunt iste quod, placeat officia vero tenetur similique impedit et sed quis corrupti a natus labore quae esse!</p>
+                </div>
+            </article>
+        </div>
     </section>
         
 
     <section id = "reach-out" class = "contact">
-        <div>
+        <div class = "flex-row">
         <h2 class = "section-title secondary-border">Reach Out</h2>
         </div>
         <div class = "contact-info">
@@ -226,5 +233,5 @@
     </footer>
 <!-- End Footer -->
 
-
+</body>
 </html>

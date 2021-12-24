@@ -16,10 +16,17 @@
     display: flex;
 }
 
+:root{
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
+
+
 /* Header style */
 header{
     background-attachment: fixed;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
     background-image: url("../images/hero-bg.jpg");
     background-position: 80%;
     background-size: cover;
@@ -30,9 +37,10 @@ header{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 header h1{
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 36px;
     font-weight: bold;
     margin: 0;
@@ -40,7 +48,7 @@ header h1{
 }
 
 header a{
-    color: #fce138;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -64,16 +72,16 @@ header nav ul li a{
 }
 
 header nav ul li a:hover{
-    background: #fce138;
+    background: var(--primary-color);
     border-radius: 15px;
-    color: #024e76;
+    color: var(--secondary-color);
     text-shadow: none;
 }
 /* Header style */
 
 
 body{
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -104,7 +112,7 @@ section{
 }
 
 .hero-cta h2{
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 55px;
     font-style: italic;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -112,10 +120,10 @@ section{
 
 .hero-form{
     background-color: rgba(252,225,56,0.8);
-    border: solid 3px #024e76;
+    border: solid 3px var(--secondary-color);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    color: #024e76;
+    color: var(--secondary-color);
     margin: 3.5%;
     padding: 20px;
     width: 40%;
@@ -131,23 +139,27 @@ section{
 }
 
 .hero-form button{
-    background-color: #024e76;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     border: none;
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 16px;
     padding: 10px 20px;
 }
 
 .hero-form button:hover{
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
+}
+
+.hero-form label{
+    margin: 0 5px;
 }
 
 .form-input{
     background-color: rgba(255,255,255,0.75);
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
-    color: #024e76;
+    color: var(--secondary-color);
     display: block;
     font-size: 16px;
     margin-bottom: 15px;
@@ -160,8 +172,62 @@ section{
     outline: none;
 }
 
-.hero-form label{
-    margin: 0 5px;
+.checkbox-wrapper input, .radio-wrapper input{
+    opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label{
+    left: 10px;
+    line-height: 1.6;
+    margin: 10px;
+    position: relative;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before{
+    background: rgba(255,255,255,0.75);
+    border: 1px solid var(--secondary-color);
+    content: "";
+    height: 20px;
+    left: -30px;
+    position: absolute;
+    top: -4px;
+    width: 20px;
+}
+
+.radio-wrapper label::before{
+    border-radius: 50%;
+}
+
+.radio-wrapper label::after{
+    background: var(--secondary-color);
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: -29px;
+    position: absolute;
+    top: -3px;
+    width: 20px;
+}
+
+.checkbox-wrapper label::after{
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    content:"";
+    height: 6px;
+    left: -26px;
+    position: absolute;
+    width: 14px;
+    top: 1px;
+    transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+    content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after{
+    content: "";
 }
 /* Hero style */
 
@@ -169,7 +235,7 @@ section{
 /* Sections Style */
 .section-title{
     border-bottom: 3px solid;
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 48px;
     margin: 0 auto 35px auto;
     padding-bottom: 20px;
@@ -178,18 +244,18 @@ section{
 }
 
 .primary-border{
-    border-color: #fce138;
+    border-color: var(--primary-color);
 }
 
 .secondary-border{
-    border-color: #39a6b2;
+    border-color: var(--tertiary-color);
 }
 /* Sections Style */
 
 
 /* What We Do Style */
 .intro p{
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 20px;
     line-height: 1.7;
     margin: 0 auto;
@@ -201,12 +267,12 @@ section{
 
 /* What You Do Style */
 .steps{ /* FOR SECTION TITLE */
-    background: #fce138;
+    background: var(--primary-color);
 }
 
 .step{ /* FOR SUBSECTIONS */
     align-items: center;
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -220,7 +286,7 @@ section{
 }
 
 .step h3{
-    color: #024e76;
+    color: var(--secondary-color);
     flex: 1 30%;
     font-size: 46px;
 }
@@ -246,14 +312,14 @@ section{
 }
 
 .step-text p{
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px;
 }
 
 .step-text h4{
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 /* What You Do Style */
 
@@ -268,8 +334,8 @@ section{
 }
 
 .trainer{ /* FOR ARTICLES */
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     flex: 1;
     margin: 20px;
 }
@@ -301,11 +367,11 @@ section{
 
 /* Reach Out Style */
 .contact{
-    background: #024e76;
+    background: var(--secondary-color);
 }
 
 .contact h2{
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .contact-info{
@@ -328,7 +394,7 @@ section{
 }
 
 .contact-info h3{
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 32px;
 }
 
@@ -340,14 +406,14 @@ section{
 }
 
 .contact-info a{
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .contact-form input, .contact-form textarea{
     background-color: rgba(255,255,255,0.75);
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
-    color: #024e76;
+    color: var(--secondary-color);
     display: block;
     font-size: 16px;
     margin-bottom: 15px;
@@ -364,8 +430,8 @@ section{
 .contact-form button{
     border: none;
     border-radius: 10px;
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 16px;
     padding: 15px 0;
     text-align: center;
@@ -373,15 +439,15 @@ section{
 }
 
 .contact-form button:hover{
-    color: #fce138;
-    background: #39a6b2;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 /* Reach Out Style */
 
 
 /* Footer style */
 footer{
-    background: #fce138;
+    background: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -390,7 +456,7 @@ footer{
 }
 
 footer h2{
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
 }
@@ -401,7 +467,7 @@ footer div{
 }
 
 footer a{
-    color: #024e76;
+    color: var(--secondary-color);
 }
 /* Footer style */
 

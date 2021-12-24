@@ -4,6 +4,21 @@
     padding: 0;
 }
 
+:root{
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
+
+body{
+    color: var(--tertiary-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    padding: 60px;
+}
+
 .text-left{
     text-align: left;
 }
@@ -14,12 +29,6 @@
 
 .flex-row{
     display: flex;
-}
-
-:root{
-    --primary-color: #fce138;
-    --secondary-color: #024e76;
-    --tertiary-color: #39a6b2;
 }
 
 
@@ -78,16 +87,6 @@ header nav ul li a:hover{
     text-shadow: none;
 }
 /* Header style */
-
-
-body{
-    color: var(--tertiary-color);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-section{
-    padding: 60px;
-}
 
 
 /* Hero Style */
@@ -183,15 +182,16 @@ section{
     position: relative;
 }
 
-.checkbox-wrapper label::before, .radio-wrapper label::before{
-    background: rgba(255,255,255,0.75);
-    border: 1px solid var(--secondary-color);
-    content: "";
-    height: 20px;
-    left: -30px;
+.checkbox-wrapper label::after{
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
+    content:"";
+    height: 6px;
+    left: -26px;
     position: absolute;
-    top: -4px;
-    width: 20px;
+    width: 14px;
+    top: 1px;
+    transform: rotate(-58deg);
 }
 
 .radio-wrapper label::before{
@@ -210,23 +210,25 @@ section{
     width: 20px;
 }
 
-.checkbox-wrapper label::after{
-    border-bottom: 2px solid var(--secondary-color);
-    border-left: 2px solid var(--secondary-color);
-    content:"";
-    height: 6px;
-    left: -26px;
+.checkbox-wrapper label::before,
+.radio-wrapper label::before{
+    background: rgba(255,255,255,0.75);
+    border: 1px solid var(--secondary-color);
+    content: "";
+    height: 20px;
+    left: -30px;
     position: absolute;
-    width: 14px;
-    top: 1px;
-    transform: rotate(-58deg);
+    top: -4px;
+    width: 20px;
 }
 
-.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+.checkbox-wrapper input + label::after,
+.radio-wrapper input + label::after{
     content: none;
 }
 
-.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after{
+.checkbox-wrapper input:checked + label::after,
+.radio-wrapper input:checked + label::after{
     content: "";
 }
 /* Hero style */
